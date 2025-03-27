@@ -21,6 +21,68 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Mulish', sans-serif;
+  color: black;
+  font-size: 14px;
+}
+
+/* Custom Standard Classes starts here ✅ */
+@layer components {
+  .custom-btn {
+    @apply px-4 py-2 border border-gray-300 shadow-sm duration-300 ease-in-out cursor-pointer text-[#075cab] rounded-lg transition-transform transform hover:scale-105;
+  }
+
+  .custom-btn:hover {
+    @apply shadow-md bg-gray-100;
+  }
+
+  .custom-btn-fill {
+    @apply px-4 py-2 border w-full border-gray-300 shadow-sm duration-300 ease-in-out cursor-pointer text-[#075cab] rounded-lg transition-transform transform hover:scale-105;
+
+  }
+
+  .custom-btn-fill:hover {
+    @apply shadow-md bg-gray-100;
+  }
+
+  .custom-btn-fit-fill {
+    @apply px-4 py-2 border w-fit border-gray-300 bg-[#075cab] shadow-sm duration-300 ease-in-out cursor-pointer text-white rounded-lg transition-transform transform hover:scale-105;
+  }
+
+  .custom-btn-fit-fill:hover {
+    @apply shadow-md bg-[#075cab];
+  }
+
+  .image-standard {
+    @apply max-w-[360px] w-auto h-auto object-contain rounded-lg shadow-lg;
+  }
+
+  .video-standard {
+    @apply max-w-[640px] w-auto object-contain rounded-lg shadow-lg;
+  }
+
+  .custom-h1 {
+    @apply text-[16px] text-[#075aaa] font-bold;
+  }
+
+  .custom-text-size {
+    @apply text-[14px];
+  }
+
+}
+
+@layer base {
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
 }
